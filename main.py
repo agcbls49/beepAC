@@ -117,7 +117,7 @@ def say_sector1_color():
     # from what was seen last frame. when the light goes back to
     # gray, current becomes None, so the next color change fires again.
     if current is not None and current != last_color1:
-        print(f"Sector 1 {current}")
+        # print(f"Sector 1 {current}")
         speak(f"Sector 1 {current}")
 
     last_color1 = current
@@ -133,7 +133,7 @@ def say_sector2_color():
     elif close(color, purple_delta): current = "Purple"
 
     if current is not None and current != last_color2:
-        print(f"Sector 2 {current}")
+        # print(f"Sector 2 {current}")
         speak(f"Sector 2 {current}")
 
     last_color2 = current
@@ -148,7 +148,7 @@ def say_sector3_color():
     elif close(color, purple_delta): current = "Purple"
 
     if current is not None and current != last_color3:
-        print(f"Sector 3 {current}")
+        # print(f"Sector 3 {current}")
         speak(f"Sector 3 {current}")
 
     last_color3 = current
