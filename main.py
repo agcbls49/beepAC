@@ -4,7 +4,8 @@ import win32com.client
 import winsound
 
 # for the beep sound 
-frequency = 1500
+upshift_frequency = 1500
+downshift_frequency = 1000
 duration = 200
 
 # EYES HERE!!!!!!!!!!!!!!!!!!!!!!!!
@@ -52,11 +53,11 @@ def make_a_beep(a_pressed_before, y_pressed_before):
     
     # if A pressed then beep
     if a_pressed_now and not a_pressed_before:
-        winsound.Beep(frequency, duration)
+        winsound.Beep(downshift_frequency, duration)
     
     # if Y pressed then beep
     if y_pressed_now and not y_pressed_before:
-        winsound.Beep(frequency, duration)
+        winsound.Beep(upshift_frequency, duration)
     
     # track state
     a_pressed_before = a_pressed_now
